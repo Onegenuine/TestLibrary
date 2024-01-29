@@ -1,5 +1,6 @@
 package ru.falaleev.tesproject.TestLibrary.dto;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.NotEmpty;
@@ -20,7 +21,7 @@ public class PersonDTO {
     @Temporal(TemporalType.DATE)
     private Date dateOfBirth;
 
-
+    @JsonBackReference
     private List<Book> books;
 
 

@@ -1,5 +1,6 @@
 package ru.falaleev.tesproject.TestLibrary.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
@@ -37,6 +38,7 @@ public class Book {
     @Column(name = "isbn")
     private String isbn;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "person_id", referencedColumnName = "id")
     private Person owner;

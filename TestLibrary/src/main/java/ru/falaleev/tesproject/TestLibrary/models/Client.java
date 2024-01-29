@@ -1,2 +1,4 @@
-package ru.falaleev.tesproject.TestLibrary.models;public class Client {
+package ru.falaleev.tesproject.TestLibrary.models;
+
+public class Client {
 }

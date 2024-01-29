@@ -1,5 +1,6 @@
 package ru.falaleev.tesproject.TestLibrary.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
@@ -39,6 +40,7 @@ public class Person {
     @Column(name = "date_of_birth")
     private Date dateOfBirth;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "owner")
     private List<Book> books;
 

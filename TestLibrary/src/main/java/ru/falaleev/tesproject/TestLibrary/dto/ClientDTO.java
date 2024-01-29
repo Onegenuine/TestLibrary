@@ -22,7 +22,7 @@ public class ClientDTO {
     @Temporal(TemporalType.DATE)
     private Date dateOfBirth;
 
-    private List<Book> books;
+
 
     @NotEmpty(message = "Название книги не может быть пустым")
     private String title;
